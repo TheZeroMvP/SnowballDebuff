@@ -31,7 +31,7 @@ class Main extends PluginBase implements Listener{
       $entity = $event->getEntity();
       $damager = $event->getDamager();
             if($child instanceof Snowball) {
-              $damager->sendMessage(TE::GREEN."You Debuffed The Snowball ". TE::RED."to" . $entity->getName());
+              $damager->sendMessage(TE::GREY."You Debuffed The Snowball ". TE::RED."to" . $entity->getName());
               $entity->getEffects()->add(new EffectInstance(VanillaEffects::BLINDNESS(), 4 * 4, 2));
               $entity->getEffects()->add(new EffectInstance(VanillaEffects::SLOWNESS(), 4 * 4, 2));
 
